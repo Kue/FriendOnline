@@ -1,5 +1,5 @@
-application: perfect-crawler-517
-version: 4
+application: friend-online
+version: 3
 runtime: php
 api_version: 1
 
@@ -10,27 +10,23 @@ handlers:
   upload: assets/.*\.(js|css)$
   secure: always  
 
-- url: /(.*\.(ico|jpg|png|gif))$
+- url: /(.*\.(png))$
   static_files: assets/\1
-  upload: assets/.*\.(ico|jpg|png|gif)$
+  upload: assets/.*\.(png)$
   application_readable: true
   
-- url: /(.+)
-  script: assets/\1
+- url: /static/(.+)
+  script: assets/static/\1
   secure: always
   
 - url: /header.php
-  script: assets/header.php
+  script: assets/static/header.php
   secure: always
   
 - url: /foot.php
-  script: assets/foot.php
+  script: assets/static/foot.php
   secure: always
-
-- url: /robots.txt
-  static_files: assets/robots.txt
-  upload: assets/robots.txt 
-  secure: always  
 
 - url: /(.+)?/?
   script: assets/RunApp.php
+  secure: always

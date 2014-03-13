@@ -2,7 +2,7 @@
 $title = 'Friend Online!';
 $path = '';
 ?>	
-<?php include_once 'header.php'; ?>
+<?php include_once 'static/header.php'; ?>
 <div id="fb-root"></div>
 <div id="wrapper">
 <div id="header">
@@ -16,4 +16,4 @@ $path = '';
 <script>window.jQuery || document.write(unescape('%3Cscript src="/jquery.min.js"%3E%3C/script%3E'))</script>
 <script src="/App.js"></script>
 <script src="/staticJS.js"></script>
-<?php include_once 'foot.php'; ?>
+<?php include_once 'static/foot.php'; ?>
